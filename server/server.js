@@ -1,11 +1,16 @@
 //import express from 'express' //setting up express
  const express =require('express') //function for express
 // const MongoClient =require('mongodb').MongoClient;
-// const cors = require('cors')
+const cors = require('cors')
 // const multer = require('multer')
 const app = express() // linking express to app
 
-// app.use(cors());
+var corsOptions = {
+  origin: 'http://localhost:5173',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
+app.use(cors(corsOptions));
 
 // var CONNECTION_STRING ="mongodb+srv://eltonsablah55:Coronavirus.19@cluster0.bhexihn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
