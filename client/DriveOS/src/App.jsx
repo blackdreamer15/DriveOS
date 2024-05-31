@@ -1,13 +1,10 @@
-
-
-
 import React,{useEffect,useState } from 'react'
 
 function App() {
   const [backendData, setbackendData] =useState([{}]) //set variable that will contain backend data from the backend api
 
   useEffect(() =>{
-fetch("/api").then(
+fetch("http://localhost:5000/api").then(
   response => response.json()
 ).then(
   data => {
