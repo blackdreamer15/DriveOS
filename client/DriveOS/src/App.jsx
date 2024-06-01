@@ -32,8 +32,8 @@
 // }
 
 // export default App
-import React from 'react'
-import Home from './screens/Home'
+import React, { useState, useEffect } from 'react'
+import Home from './components/screens/Home'
 import { BrowserRouter,
     Routes,
     Route
@@ -49,12 +49,12 @@ fetch("/api").then(
   data => {
     setbackendData(data)
   }
-)
+).catch(error => console.error('Error fetching data:', error)); //to chatch errors from the server
   }, 
   [])//fetch backend api
   return (
    <BrowserRouter>
-   <div classname = "w-full h-screen">
+   <div className = "w-full h-screen">
     <Routes>
         <Route path ="/" element={<Home/>} />
     </Routes>
