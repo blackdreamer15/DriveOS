@@ -49,7 +49,7 @@ fetch("/api").then(
   data => {
     setbackendData(data)
   }
-).catch(error => console.error('Error fetching data:', error)); //to chatch errors from the server
+).catch(error => console.error('Error fetching data:', error)); //to catch errors from the server
   }, 
   [])//fetch backend api
   return (
