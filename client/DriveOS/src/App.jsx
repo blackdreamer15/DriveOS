@@ -57,6 +57,7 @@ fetch("/api").then(
    <div className = "w-full h-screen">
     <Routes>
         <Route path ="/" element={<Home/>} />
+         < Route path ="/login" element={<Login/>} />
     </Routes>
    </div>
    
