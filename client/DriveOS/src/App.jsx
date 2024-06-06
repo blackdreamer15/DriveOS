@@ -39,6 +39,7 @@ import { BrowserRouter,
     Route
  } from 'react-router-dom';
  import Login from './components/screens/provider/Login';
+ import Signup from './components/screens/provider/Signup';
 
 function App() {
   const [backendData, setbackendData] =useState([{}]) //set variable that will contain backend data from the backend api
@@ -59,6 +60,7 @@ fetch("/api").then(
     <Routes>
         <Route path ="/" element={<Home/>} />
          < Route path ="/login" element={<Login/>} />
+         < Route path = "/signup" element={<Signup/>} />
     </Routes>
    </div>
    

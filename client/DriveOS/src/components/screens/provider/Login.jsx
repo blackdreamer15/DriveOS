@@ -11,7 +11,6 @@ const Login = () =>{
 const [email, setemail] = useState('')
 const [password, setPassword] = useState('')
 const [loading, setLoading] = useState(false)
-const { signIn } = useContext(AuthContext)
 const navigate = useNavigate();
 
 const handleSubmit = async () => {
