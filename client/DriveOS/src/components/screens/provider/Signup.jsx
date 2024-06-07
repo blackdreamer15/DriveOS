@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BusinessOutlinedIcon from "@mui/icons-material/BusinessOutlined";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
@@ -10,7 +10,41 @@ import Txtinput from "../../../ui/Txtinput";
 
 const Signup =() => {
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  const [cPassword, setCPassword] = useState("");
+  const [services, setServices] = useState([
+    { name: "Service 1", value: "service1" },
+    { name: "Service 2", value: "service2" },
+    { name: "Service 3", value: "service3" }
+  ]);
+  const [tags, setTags] = useState([]);
+  const [locSelect, setLocSelect] = useState(null);
+  const [show, setShow] = useState(false);
+
+
+  // const handleCheckboxChange = (item) => {
+  //   setTags((prevTags) =>
+  //     prevTags.includes(item.value)
+  //       ? prevTags.filter((tag) => tag !== item.value)
+  //       : [...prevTags, item.value]
+  //   );
+  // };
+
+  const handleCheckboxChange = (item) => {
+    setTags((prevTags) =>
+      prevTags.includes(item.value)
+        ? prevTags.filter((tag) => tag !== item.value)
+        : [...prevTags, item.value]
+    );
+  };
+
+
+
   return (
+
     <div className="flex flex-1">
       <div className="flex-1 min-h-screen p-20 bg-[#1D3261] text-white flex flex-col justify-center items-center">
         <div className="flex items-center justify-center mb-5">
@@ -40,7 +74,7 @@ const Signup =() => {
             </label>
             <div className="">
               <Txtinput
-                onchange={(e) => setName(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
                 type="text"
                 placeholder="Business Name"
                 icon={<BusinessOutlinedIcon color="grey" className="w-4 h-4" />}
@@ -52,7 +86,7 @@ const Signup =() => {
                   type="email"
                   placeholder="Business Email Address"
                   icon={<MailOutlineIcon color="grey" className="w-4 h-4" />}
-                  onchange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="w-1/2">
@@ -60,11 +94,11 @@ const Signup =() => {
                   type="tel"
                   placeholder="Business Phone Number"
                   icon={<PhoneOutlinedIcon color="grey" className="w-4 h-4" />}
-                  onchange={(e) => setPhone(e.target.value)}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
             </div>
-            /</div>
+            </div>
             <div className=" space-y-5">
             <div className="text-[#1D3261] space-y-1">
               <label htmlFor="services" className="block font-medium">
@@ -98,7 +132,7 @@ const Signup =() => {
                   placeholder="Password"
                   label="Password"
                   icon={<LockOutlinedIcon color="grey" className="w-4 h-4" />}
-                  onchange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div className="w-1/2">
@@ -107,7 +141,7 @@ const Signup =() => {
                   label="Confirm Password"
                   placeholder="Confirm Password"
                   icon={<LockOutlinedIcon color="grey" className="w-4 h-4" />}
-                  onchange={(e) => setCPassword(e.target.value)}
+                  onChange={(e) => setCPassword(e.target.value)}
                 />
               </div>
             </div>
@@ -130,6 +164,6 @@ const Signup =() => {
     </div>
 
     
-  )
-}
- export default Signup
+  );
+};
+ export default Signup;
