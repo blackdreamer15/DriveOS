@@ -38,13 +38,16 @@ export const AuthProvider = ({ children }) => {
 
   
 
-    const logOut = () => {
+  const logOut = () => {
+    setUser({});
+    setIsAuthenticated(false);
+    setToken("");
   };
 
 
   const register = async (data) => {
     try {
-      const res = await axios.post(`${getBaseUrl()}/provider`, data);
+      // const res = await axios.post(`${getBaseUrl()}/provider`, data);
   
       if (res.data.success) {
         setUser(res.data.provider);
@@ -52,33 +55,36 @@ export const AuthProvider = ({ children }) => {
         setToken(res.data.token);
   
         console.log("Registration successful:", res);
-        return Promise.resolve({
+        // return Promise.resolve({
+        return {
           success: true,
           message: 'Registration successful'
-        });
+        };
       } else {
         console.log("Registration failed:", res);
-        return Promise.resolve({
+        // return Promise.resolve({
+        return {
           success: false,
           message: res.data.message
-        });
+        };
       }
     } catch (error) {
       console.error("An error occurred:", error.message);
-      return Promise.reject({
+      // return Promise.reject({
+      return {
         success: false,
         message: 'An error occurred while trying to create your account'
-      });
+      };
     }
   };
 
 
 
   return (
-      <AuthContext.Provider value={{ isAuthenticated, signIn, token, user, register }}>
+      <AuthContext.Provider value={{ isAuthenticated, signIn, token, user, register, logOut }}>
               
       {children}
     </AuthContext.Provider>
-    );
-  }
+  );
+}
 
