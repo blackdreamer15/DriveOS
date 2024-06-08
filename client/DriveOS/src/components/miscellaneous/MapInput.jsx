@@ -17,6 +17,8 @@ const MapInput = ({ selected, setSelected, close }) => {
   if (!isLoaded) {
     return <div>Loading Map...</div>;
   }
+
+  
   return (
     <Modal open className="p-5">
       <Box className="bg-white w-full h-full">
