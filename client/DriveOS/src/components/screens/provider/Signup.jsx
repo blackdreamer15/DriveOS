@@ -10,6 +10,7 @@ import Txtinput from "../../../ui/Txtinput";
 
 const Signup =() => {
 
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -23,6 +24,9 @@ const Signup =() => {
   const [tags, setTags] = useState([]);
   const [locSelect, setLocSelect] = useState(null);
   const [show, setShow] = useState(false);
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
 
   // const handleCheckboxChange = (item) => {
@@ -41,6 +45,46 @@ const Signup =() => {
     );
   };
 
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (password !== cPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await fetch('http://localhost:5000/api/v1/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          service: tags,
+          password,
+          confirm_password: cPassword,
+        }),
+        credentials: 'include', // Include credentials (cookies)
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong');
+        }
+        // console.log('Success:', data);
+        localStorage.setItem('token', data.token);
+        return navigate("/dashboard");
+        // navigate("/");
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
 
   return (
@@ -64,9 +108,10 @@ const Signup =() => {
         </div>
       </div>
       <div className="flex-[1.85] max-h-screen bg-[#f5ffff]">
+          {error && <p className="text-red-500">{error}</p>}
         <form
           className="flex-col flex-1 space-y-5 px-4 h-full pt-10"
-          
+          onSubmit={handleSubmit}
         >
           <div className="space-y-4">
             <label className="block text-[#1D3261] font-medium">
@@ -149,8 +194,10 @@ const Signup =() => {
           <button
             type="submit"
             className="bg-[#074EEB] text-white rounded-md px-10 py-2 hover:bg-blue-500 w-full"
+            disabled={loading}
           >
-            Sign up
+            {loading ? 'Signing up...' : 'Sign up'}
+            {/* Sign up */}
           </button>
         </form>
         {show && (

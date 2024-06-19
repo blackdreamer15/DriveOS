@@ -1,6 +1,6 @@
 import React from "react";
 
-const Txtinput = ({placeholder, type, icon, value, label, onchange}) => {
+const Txtinput = ({placeholder, type, icon, value, label, onChange}) => {
   return (
     <div>
       {label && <span className="block text-[#1D3261] font-medium mb-1">{label}</span>}
@@ -9,7 +9,7 @@ const Txtinput = ({placeholder, type, icon, value, label, onchange}) => {
       <input
         type={type}
           placeholder={placeholder}
-          onChange={onchange}
+          onChange={onChange}
         className="w-full outline-none appearance-none placeholder:text-slate-400 text-slate-400"
         value={value}
       />

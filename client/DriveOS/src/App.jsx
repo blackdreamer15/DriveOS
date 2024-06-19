@@ -38,8 +38,11 @@ import { BrowserRouter,
     Routes,
     Route
  } from 'react-router-dom';
+ import { history } from './helper/history';
  import Login from './components/screens/provider/Login';
  import Signup from './components/screens/provider/Signup';
+ import HomePage from './components/screens/provider/HomePage';
+ import ProtectedRoute from './components/PrivateRoute';
 
 function App() {
   const [backendData, setbackendData] =useState([{}]) //set variable that will contain backend data from the backend api
@@ -58,9 +61,15 @@ fetch("/api").then(
    <BrowserRouter>
    <div className = "w-full h-screen">
     <Routes>
-        <Route path ="/" element={<Home/>} />
-         < Route path ="/login" element={<Login/>} />
-         < Route path = "/signup" element={<Signup/>} />
+      <Route path ="/" element={<Home/>} />
+      < Route path ="/login" element={<Login/>} />
+      < Route path = "/signup" element={<Signup/>} />
+      {/* Protected routes here. */}
+      < Route path = "/dashboard" element={
+        <ProtectedRoute>
+          <HomePage/>
+        </ProtectedRoute>
+      } />
     </Routes>
    </div>
    
