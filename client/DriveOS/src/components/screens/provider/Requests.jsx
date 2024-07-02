@@ -1,8 +1,8 @@
 import { Box, FormControl, InputLabel, MenuItem, Select } from '@mui/material'
 import React from 'react'
-import Txtinput from '../../components/ui/Txtinput'
+import Txtinput from '../../../ui/Txtinput';
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import DataTable from '../../components/Table/DataTable'
+import DataTable from '../../Table/DataTable';
 
 
 const Requests = () => {

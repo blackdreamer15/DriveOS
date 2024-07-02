@@ -40,9 +40,15 @@ import { BrowserRouter,
  } from 'react-router-dom';
  import { history } from './helper/history';
  import Login from './components/screens/provider/Login';
+ import Notifications from './components/screens/provider/Notifications';
+ import Personnel from './components/screens/provider/Personnel';
+ import Requests from './components/screens/provider/Requests';
+ import Transactions from './components/screens/provider/Transactions';
  import Signup from './components/screens/provider/Signup';
  import HomePage from './components/screens/provider/HomePage';
  import ProtectedRoute from './components/PrivateRoute';
+import ProvLayout from './components/Layouts/ProvLayout';
+import Dashboard from './components/screens/provider/Dashboard';
 
 function App() {
   const [backendData, setbackendData] =useState([{}]) //set variable that will contain backend data from the backend api
@@ -64,10 +70,16 @@ fetch("/api").then(
       <Route path ="/" element={<Home/>} />
       < Route path ="/login" element={<Login/>} />
       < Route path = "/signup" element={<Signup/>} />
+      <Route path="/provider" element={<ProvLayout />} />
+            <Route path="/provider/dashboard" element={<Dashboard />} />
+            <Route path="/provider/notifications" element={<Notifications />} />
+            <Route path="/provider/personnel" element={<Personnel />} />
+            <Route path="/provider/requests" element={<Requests />} />
+            <Route path="/provider/transactions" element={<Transactions />} />
       {/* Protected routes here. */}
       < Route path = "/dashboard" element={
         <ProtectedRoute>
-          <HomePage/>
+          <Dashboard/>
         </ProtectedRoute>
       } />
     </Routes>
