@@ -2,12 +2,14 @@ import React, { useContext, useState } from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import { Box } from "@mui/material";
-import Txtinput from "../../components/ui/Txtinput";
-import useSWR from "swr";
+// import Txtinput from "../../components/ui/Txtinput";
+import Txtinput from "../../../ui/Txtinput";
+// import useSWR from "swr";
 import axios from "axios";
-import getBaseUrl from "../../utils/api";
-import { AuthContext } from "../../context/AuthContext";
-import { declineReq, acceptReq } from "../../services/notify";
+// import getBaseUrl from "../../utils/api";
+// import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../Context/AuthContext";
+// import { declineReq, acceptReq } from "../../services/notify";
 import { toast } from "react-toastify";
 
 const fetchWithToken = (url, token) =>

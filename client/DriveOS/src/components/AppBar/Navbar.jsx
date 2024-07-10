@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import Avatar from "@mui/material/Avatar";
 import { NavLink } from "react-router-dom";
-import { AuthContext } from "../../context/AuthContext";
+// import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../Context/AuthContext";
 
 const Navbar = () => {
 

@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../../App bar/Navbar";
-import Sidebar from "../../App bar/Sidebar";
+import Navbar from "../AppBar/Navbar";
+import Sidebar from "../AppBar/Sidebar";
 import { Outlet } from "react-router-dom";
 import { Box } from "@mui/material";
 

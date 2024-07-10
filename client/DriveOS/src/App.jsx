@@ -70,7 +70,7 @@ fetch("/api").then(
       <Route path ="/" element={<Home/>} />
       < Route path ="/login" element={<Login/>} />
       < Route path = "/signup" element={<Signup/>} />
-      <Route path="/provider" element={<ProvLayout />} />
+      <Route path="/transactions" element={<ProvLayout />} />
             <Route path="/provider/dashboard" element={<Dashboard />} />
             <Route path="/provider/notifications" element={<Notifications />} />
             <Route path="/provider/personnel" element={<Personnel />} />

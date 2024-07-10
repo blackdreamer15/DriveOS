@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React from "react";
 import CountUp from "react-countup";
 import IconButton from "@mui/material/IconButton";

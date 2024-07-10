@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import TransTable from '../../components/Table/TransTable'
-import TransCard from '../../components/Cards/TransCard'
+import TransTable from '../../../components/Table/TransTable'
+import TransCard from '../../../components/Cards/TransCard'
 
 const Transactions = () => {
   return (

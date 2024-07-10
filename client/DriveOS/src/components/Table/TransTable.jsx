@@ -8,7 +8,8 @@ import TableRow from '@mui/material/TableRow';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import Drop from '../dropdowns/Dropdown'
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import Txtinput from '../ui/Txtinput';
+// import Txtinput from '../ui/Txtinput';
+import Txtinput from '../../ui/Txtinput';
 
 
 

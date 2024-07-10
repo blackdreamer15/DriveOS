@@ -1,8 +1,9 @@
 import React from 'react'
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import BasicTable from '../../components/Table/BTable'
-import Txtinput from '../../components/ui/Txtinput';
-import Drop from '../../components/dropdowns/Dropdown';
+// import BasicTable from '../../components/Table/BTable';
+import BasicTable from '../../../components/Table/BTable';
+import Txtinput from '../../../ui/Txtinput';
+import Drop from '../../../components/dropdowns/Dropdown';
 import { Box } from '@mui/material';
 
 const Personnel = () => {

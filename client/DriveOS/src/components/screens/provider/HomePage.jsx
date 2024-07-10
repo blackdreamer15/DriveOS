@@ -12,8 +12,8 @@
 
 // export default HomePage;
 import React from "react";
-import Navbar from "../Navs/Navbar";
-import Sidebar from "../Navs/Sidebar";
+// import Navbar from "../Navs/Navbar";
+// import Sidebar from "../Navs/Sidebar";
 import { Outlet } from "react-router-dom";
 import { Box } from "@mui/material";
 
