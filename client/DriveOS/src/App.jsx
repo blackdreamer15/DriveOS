@@ -49,6 +49,8 @@ import { BrowserRouter,
  import ProtectedRoute from './components/PrivateRoute';
 import ProvLayout from './components/Layouts/ProvLayout';
 import Dashboard from './components/screens/provider/Dashboard';
+import NavBar from './components/AppBar/Navbar';
+import ProtectedLayout from './components/protectedLayout';
 
 function App() {
   const [backendData, setbackendData] =useState([{}]) //set variable that will contain backend data from the backend api
@@ -60,28 +62,36 @@ fetch("/api").then(
   data => {
     setbackendData(data)
   }
-).catch(error => console.error('Error fetching data:', error)); //to catch errors from the server
+).catch(error => error); //to catch errors from the server
   }, 
   [])//fetch backend api
   return (
-   <BrowserRouter>
+    <BrowserRouter>
+   
    <div className = "w-full h-screen">
     <Routes>
       <Route path ="/" element={<Home/>} />
       < Route path ="/login" element={<Login/>} />
       < Route path = "/signup" element={<Signup/>} />
+    </Routes>
+
+    <NavBar />
+    
+    <Routes>
       <Route path="/transactions" element={<ProvLayout />} />
-            <Route path="/provider/dashboard" element={<Dashboard />} />
-            <Route path="/provider/notifications" element={<Notifications />} />
-            <Route path="/provider/personnel" element={<Personnel />} />
-            <Route path="/provider/requests" element={<Requests />} />
-            <Route path="/provider/transactions" element={<Transactions />} />
-      {/* Protected routes here. */}
+      <Route path="/provider/dashboard" element={<Dashboard />} />
+      <Route path="/provider/notifications" element={<Notifications />} />
+      <Route path="/provider/personnel" element={<Personnel />} />
+      <Route path="/provider/requests" element={<Requests />} />
+      <Route path="/provider/transactions" element={<Transactions />} />
+
       < Route path = "/dashboard" element={
         <ProtectedRoute>
           <Dashboard/>
         </ProtectedRoute>
       } />
+
+
     </Routes>
    </div>
    
