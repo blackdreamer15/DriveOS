@@ -7,14 +7,12 @@ const setTokenCookie = require('../function/setTokenCookies')
 const { fullUserDetails } = require('../Service/basicService')
 const { generateJwtToken } = require('../function/generateToken')
 
-router.get('/account', getUserAccount);
-// router.get('/account', authorize(), getUserAccount);
+router.get('/account', authorize(), getUserAccount);
 
 async function getUserAccount (req, res, next) {
 
     try {
-        const userId = '6692a225b14f15b96f6f6870';
-        // const userId = req.auth.id;
+        const userId = req.auth.id;
 
         // Convert string userId to ObjectId
         const objectId = new mongoose.Types.ObjectId(userId);

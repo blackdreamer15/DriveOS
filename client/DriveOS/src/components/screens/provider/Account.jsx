@@ -1,17 +1,38 @@
 
 import { Box, Card, CardContent, Typography } from '@mui/material';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Account= () => {
   // const label = { inputProps: { 'aria-label': 'Available' } }
   const [userDetails, setUserDetails] = useState(null);
+  const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
     // Fetch user details from the server
     const fetchUserDetails = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/v1/user/account');
+        // Get the cookie value
+        const token = localStorage.getItem('token');
+
+        console.log(token);
+
+        // Check if the cookie exists
+        if (!token) {
+          navigate('/login'); // Redirect to login page
+          return;
+        }
+
+        const response = await fetch("http://localhost:5000/api/v1/user/account", {
+          method: "GET",
+          headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          credentials: 'include', // Include credentials (cookies)
+        });
+
         const data = await response.json();
         setUserDetails(data);
       } catch (error) {
@@ -20,7 +41,7 @@ const Account= () => {
     };
 
     fetchUserDetails();
-  }, []);
+  }, [navigate]);
 
 
   if (!userDetails) {
