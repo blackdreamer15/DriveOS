@@ -39,7 +39,7 @@ const DataTable = () => {
       <div className="space-y-2">
         <h2 className="text-slate-700 font-semibold text-lg">DataTable</h2>
         <h3 className="text-sm font-semibold text-gray-400">
-          Lorem, ipsum dolor.
+          Requests
         </h3>
       </div>
       <DataGrid

@@ -52,7 +52,6 @@ import Dashboard from './components/screens/provider/Dashboard';
 import Account from './components/screens/provider/Account';
 import NavBar from './components/AppBar/Navbar';
 import ProtectedLayout from './components/protectedLayout';
-
 function App() {
   const [backendData, setbackendData] =useState([{}]) //set variable that will contain backend data from the backend api
 
@@ -85,7 +84,7 @@ fetch("/api").then(
       <Route path="/provider/personnel" element={<Personnel />} />
       <Route path="/provider/requests" element={<Requests />} />
       <Route path="/provider/transactions" element={<Transactions />} />
-
+      
       < Route path = "/dashboard" element={
         <ProtectedRoute>
           <Dashboard/>

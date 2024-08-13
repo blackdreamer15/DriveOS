@@ -6,8 +6,8 @@ import { Box } from "@mui/material";
 import Txtinput from "../../../ui/Txtinput";
 // import useSWR from "swr";
 import axios from "axios";
-// import getBaseUrl from "../../utils/api";
-// import { AuthContext } from "../../context/AuthContext";
+//  import getBaseUrl from "../../utils/api";
+
 import { AuthContext } from "../../Context/AuthContext";
 // import { declineReq, acceptReq } from "../../services/notify";
 import { toast } from "react-toastify";
@@ -132,7 +132,7 @@ const Notifications = () => {
           })}
       </div>
     </Box>
-  );
-};
+  )
+}
 
 export default Notifications;

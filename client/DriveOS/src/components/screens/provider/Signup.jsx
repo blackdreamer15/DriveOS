@@ -93,7 +93,7 @@ const Signup =() => {
       <div className="flex-1 min-h-screen p-20 bg-[#1D3261] text-white flex flex-col justify-center items-center">
         <div className="flex items-center justify-center mb-5">
           <img
-            src="/logoss.png"
+            src="/2.png"
             alt="DriveSOS Logo"
             width={200}
             height={250}
