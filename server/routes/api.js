@@ -20,11 +20,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser())
 
-// const USERCONTROLLER = require('../Controller/UserController');
+const USERCONTROLLER = require('../Controller/UserController');
 const AUTHCONTROLLER = require('../Controller/AuthController');
 
 app.use('/', AUTHCONTROLLER);
-// app.use('/user', USERCONTROLLER);
+app.use('/user', USERCONTROLLER);
 
 app.use(errorHandler);
 
