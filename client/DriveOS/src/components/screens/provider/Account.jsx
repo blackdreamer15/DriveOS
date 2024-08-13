@@ -41,9 +41,9 @@ const Account= () => {
     >
       <Card sx={{ maxWidth: 400, width: '100%', boxShadow: 3 }}>
         <CardContent>
-          <Typography variant="h6" component="div" gutterBottom>
+          {/* <Typography variant="h6" component="div" gutterBottom>
             Id: {userDetails.id}
-          </Typography>
+          </Typography> */}
           <Typography variant="h6" color="text.secondary">
             Name: {userDetails.name}
           </Typography>
