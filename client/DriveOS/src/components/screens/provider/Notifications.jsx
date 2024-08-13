@@ -6,16 +6,16 @@ import { Box } from "@mui/material";
 import Txtinput from "../../../ui/Txtinput";
 // import useSWR from "swr";
 import axios from "axios";
-// import getBaseUrl from "../../utils/api";
-// import { AuthContext } from "../../context/AuthContext";
+//  import getBaseUrl from "../../utils/api";
+
 import { AuthContext } from "../../Context/AuthContext";
 // import { declineReq, acceptReq } from "../../services/notify";
 import { toast } from "react-toastify";
 
-const fetchWithToken = (url, token) =>
-  axios
-    .get(url, { headers: { Authorization: "Bearer " + token } })
-    .then((res) => res.data);
+// const fetchWithToken = (url, token) =>
+//   axios
+//     .get(url, { headers: { Authorization: "Bearer " + token } })
+//     .then((res) => res.data);
 
 const Notifications = () => {
   const { token } = useContext(AuthContext);
@@ -25,8 +25,8 @@ const Notifications = () => {
     ([url, token]) => fetchWithToken(url, token),
     { refreshInterval: 90000 }
   );
-  if (error) console.log(error);
-  if (data) console.log(data.data);
+  // if (error) console.log(error);
+  // if (data) console.log(data.data);
 
   const handleAccept = async (data) => {
     try {
@@ -129,7 +129,7 @@ const Notifications = () => {
           })}
       </div>
     </Box>
-  );
-};
+  )
+}
 
 export default Notifications;
