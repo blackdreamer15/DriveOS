@@ -18,48 +18,51 @@ import { toast } from "react-toastify";
 //     .then((res) => res.data);
 
 const Notifications = () => {
-  const { token } = useContext(AuthContext);
-  const [reqs, setReqs] = useState([]);
-  const { data, error, isLoading } = useSWR(
-    [`${getBaseUrl()}/notify/get`, token],
-    ([url, token]) => fetchWithToken(url, token),
-    { refreshInterval: 90000 }
-  );
+  // const { token } = useContext(AuthContext);
+  // const [reqs, setReqs] = useState([]);
+  const [isLoading, setisLoading] = useState([]);
+  const [error, seterror] = useState([]);
+  const [data, setdata] = useState([]);
+  // const { data, error, isLoading } = useSWR(
+  //   [`${getBaseUrl()}/notify/get`, token],
+  //   ([url, token]) => fetchWithToken(url, token),
+  //   { refreshInterval: 90000 }
+  // );
   // if (error) console.log(error);
   // if (data) console.log(data.data);
 
-  const handleAccept = async (data) => {
-    try {
-      toast.info('Kindly stay on this page while we process your request')
-      const res = await acceptReq(data, token);
-      console.log("accept", res);
-      if (!res.success) {
-        return toast.warn(res.message)
-      }
-      return toast.success('Request Accepted Successfully')
-    } catch (error) {
-      toast.error('We encountered an error processing your request')
-      console.log("Error", error);
-    }
-  };
+  // const handleAccept = async (data) => {
+  //   try {
+  //     toast.info('Kindly stay on this page while we process your request')
+  //     const res = await acceptReq(data, token);
+  //     console.log("accept", res);
+  //     if (!res.success) {
+  //       return toast.warn(res.message)
+  //     }
+  //     return toast.success('Request Accepted Successfully')
+  //   } catch (error) {
+  //     toast.error('We encountered an error processing your request')
+  //     console.log("Error", error);
+  //   }
+  // };
 
 
 
 
-  const handleReject = async (data) => {
-    try {
-      toast.info('Kindly stay on this page while we process your request')
-      const res = await declineReq(data, token);
-      console.log("decline", res);
-      if (!res.success) {
-        return toast.warn(res.message)
-      }
-      return toast.success('Request Declined Successfully')
-    } catch (error) {
-      toast.error('We encountered an error processing your request')
-      console.log("Error", error);
-    }
-  };
+  // const handleReject = async (data) => {
+  //   try {
+  //     toast.info('Kindly stay on this page while we process your request')
+  //     const res = await declineReq(data, token);
+  //     console.log("decline", res);
+  //     if (!res.success) {
+  //       return toast.warn(res.message)
+  //     }
+  //     return toast.success('Request Declined Successfully')
+  //   } catch (error) {
+  //     toast.error('We encountered an error processing your request')
+  //     console.log("Error", error);
+  //   }
+  // };
 
   return (
     <Box className="flex-1 flex flex-col space-y-5">

@@ -7,6 +7,15 @@ function basicDetails(account, tokens) {
     };
 }
 
+function fullUserDetails(account, tokens) {
+    const { id, name, phone, email, service } = account;
+    const { token } = tokens;
+
+    return { 
+        id, name, email, phone, service, token
+    };
+}
 
 
-module.exports = { basicDetails }
+
+module.exports = { basicDetails, fullUserDetails }

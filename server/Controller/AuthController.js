@@ -18,7 +18,7 @@ async function signupUser (req, res, next) {
         const { name, phone, email, password, service } = req.body;
 
         //first catch if user already exist
-        if(await await User.findOne({ email })){
+        if(await User.findOne({ email })){
             console.log("He was found in the db");
             throw new Error('Email already exists.');
         }

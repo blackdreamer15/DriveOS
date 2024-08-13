@@ -49,6 +49,7 @@ import { BrowserRouter,
  import ProtectedRoute from './components/PrivateRoute';
 import ProvLayout from './components/Layouts/ProvLayout';
 import Dashboard from './components/screens/provider/Dashboard';
+import Account from './components/screens/provider/Account';
 import NavBar from './components/AppBar/Navbar';
 import ProtectedLayout from './components/protectedLayout';
 function App() {
@@ -87,6 +88,12 @@ fetch("/api").then(
       < Route path = "/dashboard" element={
         <ProtectedRoute>
           <Dashboard/>
+        </ProtectedRoute>
+      } />
+
+      < Route path = "/account" element={
+        <ProtectedRoute>
+          <Account/>
         </ProtectedRoute>
       } />
 
