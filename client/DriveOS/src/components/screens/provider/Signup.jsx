@@ -17,9 +17,10 @@ const Signup =() => {
   const [password, setPassword] = useState("");
   const [cPassword, setCPassword] = useState("");
   const [services, setServices] = useState([
-    { name: "Service 1", value: "service1" },
-    { name: "Service 2", value: "service2" },
-    { name: "Service 3", value: "service3" }
+    { name: "Flat Tire Repairs", value: "service1" },
+    { name: "Towing Service", value: "service2" },
+    { name: "Mechanic Support", value: "service3" },
+    { name:"Fuel Delivery", value:"service4" }
   ]);
   const [tags, setTags] = useState([]);
   const [locSelect, setLocSelect] = useState(null);
