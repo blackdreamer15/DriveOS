@@ -36,7 +36,7 @@ const Navbar = () => {
 
 
     return (
-      <nav className="w-full py-3 bg-[#f5ffff] flex flex-row px-3 items-center justify-between">
+      <div className="w-full py-3 bg-[#f5ffff] flex flex-row px-3 items-center justify-between">
         <NavLink to="/">
           <img
             src={"/logo.png"}
@@ -52,9 +52,9 @@ const Navbar = () => {
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/dashboard">Dashboard</NavLink>
-            </li>
+            </li> */}
             
             <div className="relative" ref={dropdownRef}>
               <button onClick={toggleDropdown} className="focus:outline-none">
@@ -83,7 +83,7 @@ const Navbar = () => {
           <DropDown trigger="My transactions" />
           {/* <h3 className="text-base text-slate-700">name</h3> */}
         </div>
-      </nav>
+      </div>
     );
   
 

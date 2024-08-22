@@ -16,11 +16,15 @@ import React from 'react'
 import DataCard from '../../Cards/DataCard';
 import DataChart from '../../Charts/DataChart';
 import RatingCard from '../../Cards/RatingCard';
+import Navbar from '../../AppBar/Navbar';
+
 
 const Dashboard= () => {
   const label = { inputProps: { 'aria-label': 'Available' } }
+
   return (
-    <Box className="flex-1 flex flex-col space-y-5">
+    <Box className="flex-1 flex flex-col space-y-5 m-2">
+      <Navbar/>
       <div className="flex w-full flex-row justify-between">
         <div></div>
         <div className="bg-[#f5ffff] w-72 py-1 px-2 ">
@@ -51,6 +55,12 @@ const Dashboard= () => {
             subtitle={"February"}
             type={"line"}
           />
+        </div>
+        <div>
+          <script>
+
+            
+          </script>
         </div>
         <div className="flex-1">
           <DataChart

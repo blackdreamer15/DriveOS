@@ -1,8 +1,12 @@
 import React from 'react'
 
+
 const Home = () => {
+  
   return (
     <div className="max-h-screen font-plus-jakarta-sans scroll-smooth overflow-y-scroll">
+      <div>
+
     <nav className="bg-[#f5ffff] py-4 px-8 shadow fixed top-0 left-0 right-0 z-10">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
@@ -45,8 +49,10 @@ const Home = () => {
             </a>
           </li>
         </ul>
+      
       </div>
     </nav>
+      </div>
     <main className="max-w-screen p-10 mt-16 scroll-smooth space-y-10">
       <section id="home" className="flex items-center">
         <div className="flex-1 space-y-10 pl-5">
@@ -56,9 +62,10 @@ const Home = () => {
             <span className="text-[#074EEB]">Fuel Delivery</span> at Your
             Fingertips!&quot;
           </h1>
-          <button className="bg-[#074EEB] text-white rounded-md px-10 py-2 text-lg focus:bg-white focus:ring-1 focus:text-blue-500 focus:ring-blue-500 hover:bg-blue-500">
-            Become a Service Provider
-          </button>
+          {/* <button className="bg-[#074EEB] text-white rounded-md px-10 py-2 text-lg focus:bg-white focus:ring-1 focus:text-blue-500 focus:ring-blue-500 hover:bg-blue-500"> 
+            Become a Service Provider on
+           </button> */}
+          {/* <Link to="/signup" className="bg-[#074EEB] text-white rounded-md px-10 py-2 text-lg focus:bg-white focus:ring-1 focus:text-blue-500 focus:ring-blue-500 hover:bg-blue-500">Become a Service provider</Link> */}
         </div>
         <div className="flex-1 flex justify-center">
           <img
@@ -319,18 +326,18 @@ const Home = () => {
               Send us your email and we&rsquo;ll reach out to you in less than
               24 hours
             </p>
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="px-3 py-2 border rounded-md"
-              />
-              <button className="ml-2 px-4 py-2 bg-blue-500 text-white rounded-md">
+              /> */}
+              {/* <button className="ml-2 px-4 py-2 bg-blue-500 text-white rounded-md">
                 Submit
-              </button>
+              </button> */}
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </section>
     </main>
     <footer className="bg-[#f5ffff] py-2 px-8 text-center">

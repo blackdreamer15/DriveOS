@@ -5,10 +5,13 @@ import BasicTable from '../../../components/Table/BTable';
 import Txtinput from '../../../ui/Txtinput';
 import Drop from '../../../components/dropdowns/Dropdown';
 import { Box } from '@mui/material';
+import Navbar from '../../AppBar/Navbar';
 
 const Personnel = () => {
   return (
-    <Box className="flex-1 flex flex-col space-y-5">
+   
+    <Box className="flex-1 flex flex-col space-y-5 m-2">
+       <Navbar/>
       <div className="flex space-x-3 items-center">
         <div className=" w-full">
         <div className="w-72">
@@ -19,9 +22,9 @@ const Personnel = () => {
           />
         </div>
         </div>
-        <div className="flex items-center justify-center w-36">
+        {/* <div className="flex items-center justify-center w-36">
           <Drop trigger={'Add Personnel'} />
-        </div>
+        </div> */}
       </div>
       <div>
         <BasicTable />

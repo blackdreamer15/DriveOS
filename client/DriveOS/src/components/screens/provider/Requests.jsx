@@ -3,12 +3,14 @@ import React from 'react'
 import Txtinput from '../../../ui/Txtinput';
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import DataTable from '../../Table/DataTable';
+import Navbar from '../../AppBar/Navbar';
 
 
 const Requests = () => {
   return (
     <Box className="flex-1 flex flex-col space-y-5">
-      <div className="flex space-x-3 items-center">
+      <Navbar/>
+      <div className="flex space-x-3 items-center m-2">
         <div className=" w-full flex flex-row space-x-3">
           <div className="w-72">
             <Txtinput

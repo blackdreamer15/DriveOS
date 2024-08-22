@@ -75,7 +75,7 @@ fetch("/api").then(
       < Route path = "/signup" element={<Signup/>} />
     </Routes>
 
-    <NavBar />
+   
     
     <Routes>
       <Route path="/transactions" element={<ProvLayout />} />
@@ -96,8 +96,6 @@ fetch("/api").then(
           <Account/>
         </ProtectedRoute>
       } />
-
-
     </Routes>
    </div>
    

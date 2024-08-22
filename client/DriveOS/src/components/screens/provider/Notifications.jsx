@@ -70,8 +70,7 @@ const Notifications = () => {
         <h3 className="text-2xl font-semibold text-slate-700">
           Incoming Requests
         </h3>
-
-        {/* <div className="w-72">
+{/* <div className="w-72">
           <Txtinput
             placeholder="Search personnel"
             type="text"

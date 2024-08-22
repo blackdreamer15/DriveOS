@@ -22,6 +22,10 @@ const rows = [
   createData(15310,18468,'Lelia Simmons', 346,49, '07/06/2023 9:30am','pending'),
   createData(17144,16842,'Janie Harrison', 278,5, '07/06/2023 9:30am','pending'),
   createData(19591,17476,'Willie Singleton', 150,40, '07/06/2023 9:30am','pending'),
+  createData(17093,13822,'Louisa Henry', 427,25, '07/06/2023 9:30am','pending'),
+  createData(15310,18468,'Lelia Simmons', 346,49, '07/06/2023 9:30am','pending'),
+  createData(17144,16842,'Janie Harrison', 278,5, '07/06/2023 9:30am','pending'),
+  createData(19591,17476,'Willie Singleton', 150,40, '07/06/2023 9:30am','pending'),
 ];
 
 export default function TransTable() {
