@@ -57,7 +57,7 @@ const Home = () => {
       <section id="home" className="flex items-center">
         <div className="flex-1 space-y-10 pl-5">
           <h1 className="font-bold text-3xl leading-[60px] lg:leading-[80px] md:text-3xl lg:text-5xl xl:text-6xl">
-            &quot;<span className="text-[#074EEB]">DriveOS</span>: On-Demand{" "}
+            &quot;<span className="text-[#074EEB]">DriveSOS</span>: On-Demand{" "}
             <span className="text-[#074EEB]">Roadside Assistance</span> and{" "}
             <span className="text-[#074EEB]">Fuel Delivery</span> at Your
             Fingertips!&quot;
@@ -224,8 +224,8 @@ const Home = () => {
           </h3>
           <p className="text-xl text-justify">
             Install the mobile app and sign up to gain access to the
-            incredible benefits when you have DriveOS. Whatever service you
-            need for your vehicle, DriveOS has got you covered!
+            incredible benefits when you have DriveSOS. Whatever service you
+            need for your vehicle, DriveSOS has got you covered!
           </p>
         </div>
       </section>
@@ -235,7 +235,7 @@ const Home = () => {
             Interested in becoming a Service Provider? Sign up right now!
           </h3>
           <p className="text-xl text-justify">
-            Sign up with DriveOS today and become a valued Service Provider
+            Sign up with DriveSOS today and become a valued Service Provider
             today. Let our customers find you and experience the quality of
             your services. Your business and new customers will thank you.
             Sign up now!
@@ -264,7 +264,7 @@ const Home = () => {
           <p className="text-xl text-justify">
             Feel free to contact us for any assistance or questions. We are
             happy to communiucate with you and provide you with any
-            information you require. Email us today at DriveOSGH@gmail.com
+            information you require. Email us today at DriveSOSGH@gmail.com
           </p>
         </div>
       </section>
@@ -341,7 +341,7 @@ const Home = () => {
       </section>
     </main>
     <footer className="bg-[#f5ffff] py-2 px-8 text-center">
-      <p>&copy; {new Date().getFullYear()} DriveOS</p>
+      <p>&copy; {new Date().getFullYear()} DriveSOS</p>
     </footer>
   </div>
   )

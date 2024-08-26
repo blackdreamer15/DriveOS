@@ -20,7 +20,10 @@ const Signup =() => {
     { name: "Flat Tire Repairs", value: "service1" },
     { name: "Towing Service", value: "service2" },
     { name: "Mechanic Support", value: "service3" },
-    { name:"Fuel Delivery", value:"service4" }
+    { name:"Fuel Delivery", value:"service4" },
+    { name:"Battery Jump Start" ,value:"service5"},
+    { name:"Flat Tire Repair" ,value:"service5"}
+
   ]);
   const [tags, setTags] = useState([]);
   const [locSelect, setLocSelect] = useState(null);

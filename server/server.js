@@ -21,7 +21,7 @@ const APIROUTE = require('./routes/api');
 
 // var CONNECTION_STRING ="mongodb+srv://eltonsablah55:Coronavirus.19@cluster0.bhexihn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
-// connect('mongodb+srv://danitsolutions3:dEno%56T@cluster0.bhexihn.mongodb.net/DriveOS?retryWrites=true&w=majority&appName=Cluster0')
+// connect('mongodb+srv://danitsolutions3:dEno%56T@cluster0.bhexihn.mongodb.net/DriveSOS?retryWrites=true&w=majority&appName=Cluster0')
 
 
 mongoose.

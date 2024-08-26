@@ -88,8 +88,8 @@ const Login = () =>{
     <div className="flex-1 min-h-screen p-20 bg-[#1D3261] text-white">
       <div className="flex items-center justify-center mb-5">
         <img
-          src="/2.png"
-          alt="DriveOS Logo"
+          src="/logoss.png"
+          alt="DriveSOS Logo"
           width={200}
           height={250}
         />
