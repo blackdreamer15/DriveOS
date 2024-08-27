@@ -1,3 +1,4 @@
+import repairRequestRoutes from './routes/repairRequests';
 //import express from 'express' //setting up express
  const express =require('express') //function for express
 // const MongoClient =require('mongodb').MongoClient;
@@ -8,6 +9,8 @@ const app = express() // linking express to app
 require('dotenv').config();
 
 
+
+
 var corsOptions = {
   origin: 'http://localhost:5173',
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
@@ -16,6 +19,7 @@ var corsOptions = {
 
 // app.use(cors());
 app.use(cors(corsOptions));
+app.use('/api/repair-requests', repairRequestRoutes);
 
 const APIROUTE = require('./routes/api');
 
