@@ -1,7 +1,9 @@
-import repairRequestRoutes from './routes/repairRequests';
-//import express from 'express' //setting up express
- const express =require('express') //function for express
+const repairRequestRoutes = require('./routes/repairRequests');
+
+// import express from 'express' //setting up express
+const express =require('express') //function for express
 // const MongoClient =require('mongodb').MongoClient;
+
 const cors = require('cors')
 const mongoose = require('mongoose');
 // const multer = require('multer')
