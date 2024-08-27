@@ -51,7 +51,7 @@ app.get("/api", (req, res) =>{
 // app.listen(5000, () => {MongoClient.connect(CONNECTION_STRING,(error,client)=>{
 //     database=client.db(DATABASENAME);console.log("Connection successful");
 // }); 
-app.listen(5000,()=>{console.log("Server started")})
+app.listen(4000,()=>{console.log("Server started")})
 // }) //opens the api on a localhost 5000 because the default local host for the client is 3000
 
 // app.get("/api/Serviceproviders/GetNotes",(req,res)=> {

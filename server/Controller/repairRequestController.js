@@ -1,5 +1,4 @@
-const { Request, Response } = require('express');
-const RepairRequest = require('../Model/RepairRequest'); // Adjust this path if necessary
+const RepairRequest = require('../Model/RepairRequest');
 const { Types } = require('mongoose');
 
 const getAllRequests = async (req, res) => {
