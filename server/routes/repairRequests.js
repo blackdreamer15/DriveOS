@@ -1,5 +1,5 @@
-import express from 'express';
-import * as repairRequestController from '../Controller/repairRequestController';
+const express = require('express');
+const repairRequestController = require('../Controller/repairRequestController');
 
 const router = express.Router();
 
@@ -8,4 +8,4 @@ router.post('/', repairRequestController.createRequest);
 router.put('/:id/accept', repairRequestController.acceptRequest);
 router.put('/:id/decline', repairRequestController.declineRequest);
 
-export default router;
+module.exports = router;

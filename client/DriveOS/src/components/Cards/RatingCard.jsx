@@ -23,7 +23,7 @@ const RatingCard = () => {
           </div>         
           <div>
               <h3 className="text-lg text-slate-700">Review</h3>
-                <p className="text-sm text-slate-500">oaky oaky!</p>
+                <p className="text-sm text-slate-500">Quality service! I rate you 5-star</p>
           </div>
           <h3 className='text-slate-200 text-sm'>Request ID #1234d4df4</h3>
     </Box>

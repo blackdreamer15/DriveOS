@@ -17,15 +17,15 @@ function createData(id,reqId, name, amount,fee, date,status) {
 }
 
 const rows = [
-  createData(17048,12737,'Ann Chambers', 329,44, '07/06/2023 9:30am','pending'),
-  createData(17093,13822,'Louisa Henry', 427,25, '07/06/2023 9:30am','pending'),
-  createData(15310,18468,'Lelia Simmons', 346,49, '07/06/2023 9:30am','pending'),
-  createData(17144,16842,'Janie Harrison', 278,5, '07/06/2023 9:30am','pending'),
-  createData(19591,17476,'Willie Singleton', 150,40, '07/06/2023 9:30am','pending'),
-  createData(17093,13822,'Louisa Henry', 427,25, '07/06/2023 9:30am','pending'),
-  createData(15310,18468,'Lelia Simmons', 346,49, '07/06/2023 9:30am','pending'),
-  createData(17144,16842,'Janie Harrison', 278,5, '07/06/2023 9:30am','pending'),
-  createData(19591,17476,'Willie Singleton', 150,40, '07/06/2023 9:30am','pending'),
+  createData(17048,12737,'Ann Chambers', 329,44, '07/06/2024 9:30am','pending'),
+  createData(17093,13822,'Louisa Henry', 427,25, '07/06/2024 9:30am','pending'),
+  createData(15310,18468,'Lelia Simmons', 346,49, '07/06/2024 9:30am','pending'),
+  createData(17144,16842,'Janie Harrison', 278,5, '07/06/2024 9:30am','pending'),
+  createData(19591,17476,'Willie Singleton', 150,40, '07/06/2024 9:30am','pending'),
+  createData(17093,13822,'Louisa Henry', 427,25, '07/06/2024 9:30am','pending'),
+  createData(15310,18468,'Lelia Simmons', 346,49, '07/06/2024 9:30am','pending'),
+  createData(17144,16842,'Janie Harrison', 278,5, '07/06/2024 9:30am','pending'),
+  createData(19591,17476,'Willie Singleton', 150,40, '07/06/2024 9:30am','pending'),
 ];
 
 export default function TransTable() {
@@ -48,7 +48,7 @@ export default function TransTable() {
             <TableCell align="left" className=' text-slate-400'>Request ID</TableCell>
             <TableCell align="left" className=' text-slate-400'>Name</TableCell>
             <TableCell align="left" className=' text-slate-400'>Amount</TableCell>
-            <TableCell align="left" className=' text-slate-400'>Fee</TableCell>
+            <TableCell align="left" className=' text-slate-400'>Discount</TableCell>
             <TableCell align="left" className=' text-slate-400'>Date</TableCell>
             <TableCell align="left" className=' text-slate-400'>Status</TableCell>
             <TableCell align="left" className=' text-slate-400'>Action</TableCell>

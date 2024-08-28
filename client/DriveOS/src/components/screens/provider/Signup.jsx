@@ -32,15 +32,6 @@ const Signup =() => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-
-  // const handleCheckboxChange = (item) => {
-  //   setTags((prevTags) =>
-  //     prevTags.includes(item.value)
-  //       ? prevTags.filter((tag) => tag !== item.value)
-  //       : [...prevTags, item.value]
-  //   );
-  // };
-
   const handleCheckboxChange = (item) => {
     setTags((prevTags) =>
       prevTags.includes(item.value)
@@ -97,7 +88,7 @@ const Signup =() => {
       <div className="flex-1 min-h-screen p-20 bg-[#1D3261] text-white flex flex-col justify-center items-center">
         <div className="flex items-center justify-center mb-5">
           <img
-            src="/2.png"
+            src="/logoss.png"
             alt="DriveSOS Logo"
             width={200}
             height={250}
